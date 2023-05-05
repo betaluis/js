@@ -1,3 +1,4 @@
+// Using get and set
 class Pizza {
     constructor(pizzaType, pizzaSize) {
         this.type = pizzaType;

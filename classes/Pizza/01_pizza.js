@@ -1,10 +1,14 @@
+// Creating a class
 class Pizza {
+
+    // Default values
     constructor(){
         this.type = "pepperoni";
         this.size = "large";
         this.crust = "original";
     }
 
+    // Creating methods
     bake() {
         console.log(`Baking ${this.size} ${this.type} pizza with ${this.crust} crust`);
     }
