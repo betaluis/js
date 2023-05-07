@@ -6,14 +6,27 @@ class Pizza {
         this.type = type;
         this.crust = crust;
         this.size = size;
+        this.toppings = [];
     }
 
     setCrust(crustType) {
-       return this.crust = crustType; 
+       this.crust = crustType; 
     }
 
     getCrust() {
         return this.crust;
+    }
+
+    getToppings() {
+        return this.toppings;
+    }
+
+    setToppings(topping) {
+        this.toppings.push(topping);
+    }
+
+    clearToppings() {
+        this.toppings = [];
     }
 
     bake() {
@@ -27,4 +40,18 @@ myPizza.bake();
 myPizza.setCrust("stuffed");
 myPizza.bake();
 
+// Toppings
 
+console.log(myPizza.getToppings()); // empty array
+
+myPizza.setToppings("mushrooms");
+
+console.log(myPizza.getToppings()); // [ 'mushrooms' ]
+
+myPizza.setToppings("pepperoni");
+
+console.log(myPizza.getToppings()); // [ "mushrooms", "pepperoni" ]
+
+myPizza.clearToppings();
+
+console.log(myPizza.getToppings()); // []
